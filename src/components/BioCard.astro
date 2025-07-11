@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+
+const { image, alt } = Astro.props;
+---
+<div class="relative group bg-gray-200 rounded-lg overflow-hidden shadow-lg border border-gray-800">
+  <Image
+    src={image}
+    alt={alt}
+    widths={[400, 600, 800]}
+    sizes="100vw"
+    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+  />
+</div>

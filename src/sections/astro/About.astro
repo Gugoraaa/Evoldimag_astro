@@ -1,0 +1,103 @@
+---
+import { Image } from 'astro:assets';
+import mauri from '../../assets/mauri.webp'; // adjust the path if needed
+const items = [
+  {
+    text: "Desde cero a ",
+    bold: "experto digitaldentistry"
+  },
+  {
+    text: "Desde la ",
+    bold: "comodidad",
+    after: " de tu consultorio-lab, te vas a ahorrar el avión, hotel, comida y, lo mejor, ¡seguirás trabajando y estudiando al mismo tiempo!"
+  },
+  {
+    text: "Acceso a ",
+    bold: "grupo VIP",
+    after: " donde estarás rodeado de personas de diferentes países empujándose juntos a crecer."
+  },
+  {
+    bold: "Asesoría 24hrs",
+    after: " diaria por 6 meses."
+  },
+  {
+    text: "Artículos traducidos al español JPD. ",
+    bold: "Coffee-Lecture:",
+    after: " cápsulas de artículos científicos explicados fácilmente."
+  },
+  {
+    bold: "Networking:",
+    after: " Oportunidad de crear relaciones laborales con compañeros de otros países."
+  }
+];
+
+---
+
+<div id="Nosotros" class="my-10 xl:mb-20">
+  <div class="xl:h-fill max-w-7xl grid grid-cols-1 px-10 md:grid-cols-2 mx-auto gap-4 md:grid-rows-[auto_auto] 
+              md:gap-4 md:px-10 
+              lg:max-w-5xl lg:gap-4
+              xl:py-10 xl:px-40 xl:gap-5 xl:max-w-7xl
+              2xl:gap-6 2xl:px-8">
+
+    <!-- Foto -->
+    <div class="order-1 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 h-auto md:max-h-96">
+      <Image 
+        src={mauri}
+        alt="Mauricio Avendaño trabajando"
+        widths={[400, 800, 1200]}
+        sizes="100vw"
+        class="rounded-xl w-full h-full object-cover"
+        style="object-position: center top"
+      />
+    </div>
+
+    <!-- Texto principal -->
+    <div class="order-3 md:order-2 bg-gray-800 rounded-xl shadow-lg md:row-span-2 transition-all duration-300 transform hover:scale-105 py-6 px-6 md:px-8 md:py-6 xl:px-12 xl:py-6 2xl:px-14 2xl:py-9 overflow-hidden flex flex-col md:h-full">
+      <div class="max-w-full">
+        <h2 class="font-bold text-white text-xl mb-4 md:text-2xl md:mb-6 lg:text-xl lg:mb-4 xl:mb-6 2xl:mb-8 2xl:text-3xl">
+          Sé parte de la <br /> evolución digital
+        </h2>
+        <p class="text-white mb-6 md:mb-6 lg:text-sm xl:mb-5 xl:text-base 2xl:text-xl">
+          Aprende a implementar soluciones digitales que te permitan trabajar de manera más eficiente.
+        </p>
+        <blockquote class="hidden lg:block text-white mb-4 md:mb-5 lg:text-sm xl:mt-2 xl:text-base xl:mb-5 2xl:mb-6 2xl:text-xl">
+          "No todos están listos para el verdadero cambio."
+        </blockquote>
+
+        <ul class="text-left lg:text-sm xl:text-base 2xl:text-lg">
+          {items.map(({ text, bold, after }, index) => (
+          <li class="text-white mb-3 lg:mb-2 xl:mb-4 flex items-start">
+            <span class="mr-2 2xl:mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:h-5 lg:w-5 xl:h-6 xl:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <p class="break-words">
+              {text && <span>{text}</span>}
+              {bold && <strong>{bold}</strong>}
+              {after && <span>{after}</span>}
+            </p>
+          </li>
+        ))}
+        </ul>
+
+
+      </div>
+    </div>
+
+    <!-- Texto extra -->
+    <div class="order-2 md:order-3 bg-gray-800 shadow-lg rounded-lg transition-all duration-300 transform hover:scale-105 py-6 px-6 md:py-6 md:px-8 xl:py-8 xl:px-10 2xl:px-12 2xl:py-8 md:h-auto">
+      <h2 class="font-extrabold text-white mb-5 lg:mb-3 text-2xl lg:text-xl xl:text-2xl 2xl:text-3xl">
+        Hola, soy <br /> <span class="text-blue-400">Mauricio Avendaño</span>
+      </h2>
+      <p class="text-white leading-relaxed lg:text-sm xl:text-base 2xl:text-lg">
+        "Todos comenzamos siendo principantes.. mi misión es impulsarte en tu crecimiento profesional y personal con herramientas digitales,
+        pero lo más importante que disfrutemos cada momento del recorrido."
+      </p>
+      <p class="text-white leading-relaxed mt-4 lg:mt-2 xl:mt-4 xl:text-base 2xl:text-lg">
+        Y que no se te olvide, <span class="font-bold">¡disfruta el momento!</span>
+      </p>
+    </div>
+  </div>
+</div>

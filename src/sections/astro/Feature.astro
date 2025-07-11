@@ -1,0 +1,49 @@
+---
+import FeatureCard from '../../components//FeatureCard.astro';
+import { RotateIcon,ClockIcon,QualityIcon,StandOutIcon,InnovationIcon,DifferenceIcon } from "../../components/icons/feature/FeatureIcons";
+
+---
+<section class="max-w-7xl mx-auto px-8 pt-12 pb:4 md:py-20 md:px-10 xl:px-40 2xl:py-24 2xl:px-0">
+  <div class="text-center mb-6 md:mb-12">
+    <h2 class="text-sm font-semibold tracking-wide text-blue-400 uppercase mb-4">Avanza hacia el futuro de la odontología</h2>
+    <h1 class="text-3xl md:text-4xl font-bold">¿Para quién es la estancia digital dentistry?</h1>
+  </div>
+
+  <div class="grid grid-cols-2 px-2 gap-4 md:grid-cols-3 md:gap-4 xl:gap-6 2xl:gap-8 text-center group relative">
+    <FeatureCard 
+      icon={RotateIcon } 
+      title="Revoluciona tu práctica odontológica"
+      description="Moderniza tus herramientas y métodos para brindar la mejor atención."
+    />
+    <FeatureCard 
+      icon={ClockIcon} 
+      title="Optimiza tu tiempo y aumenta tu productividad"
+      description="Aprovecha la tecnología para hacer más en menos tiempo."
+    />
+    <FeatureCard
+      icon={QualityIcon }
+      title="Ofrece tratamientos de alta precisión y calidad"
+      description="Resalta tu experiencia con resultados excepcionales."
+    />
+    <FeatureCard
+      icon={StandOutIcon}
+      title="Destácate en el mundo de la odontología"
+      description="Sé un referente en innovación y profesionalismo."
+    />
+    <FeatureCard
+      icon={InnovationIcon}
+      title="Invierte en innovación y crecimiento profesionall"
+      description="Asegura el éxito continuo de tu carrera."
+    />
+    <FeatureCard
+      icon={DifferenceIcon}
+      title="Para quienes buscan marcar la diferencia"
+      description="Avanza hacia el futuro de la odontología"
+    />
+  </div>
+
+  <h2 class="text-base font-semibold tracking-wide text-[#AAB2C0] mb-4 text-center pt-8">
+    Si estás dispuesto a invertir en ti mismo y en tu futuro,<br />
+    esta estancia es la oportunidad perfecta para dar el salto hacia una odontología con transformación digital.
+  </h2>
+</section>

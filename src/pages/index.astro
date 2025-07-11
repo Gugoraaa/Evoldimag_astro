@@ -1,11 +1,35 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import Navbar from '../sections/Navbar';
+import Hero from '../sections/astro/Hero.astro';
+import About from '../sections/astro/About.astro';
+import Protocols from '../sections/astro/Protocols.astro';
+import Feature from '../sections/astro/Feature.astro';
+import Opinions from '../sections/astro/Opinions.astro';
+import Destinos from '../sections/Destinos';
+import Bio from '../sections/astro/Bio.astro';
+import Courses from '../sections/astro/Courses.astro';
+import Podcast from '../sections/Podcast';
+import YoutubeSection from '../sections/astro/Youtube.astro';
+import Footer from '../sections/astro/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<Navbar client:load />
+	<Hero/>
+	<About/>
+	<Protocols/>
+	<Feature />
+	<Opinions/>
+	<Destinos client:load />
+	<Bio/>
+	<Courses/>
+	<Podcast client:load/>
+	<YoutubeSection />
+	<Footer/>
+	<WhatsAppButton />
+	
 </Layout>

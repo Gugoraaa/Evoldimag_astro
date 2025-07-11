@@ -1,0 +1,30 @@
+---
+// Props
+import {Arrow} from '../components/icons/courses/coursesIcons.tsx';
+
+export interface Props {
+  href: string;
+  title: string;
+  description: string;
+  icon: any;
+   // JSX or Astro component
+}
+const { icon:Icon ,href, title, description } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="bg-gray-800 p-6 rounded-2xl shadow-lg group block transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+>
+  <div class="flex justify-center mb-4">
+    <Icon/>
+  </div>
+  <h2 class="text-lg font-semibold mb-2">{title}</h2>
+  <p class="text-sm text-gray-400 mb-4">{description}</p>
+  <span class="text-blue-400 hover:underline flex items-center">
+    Ver
+    <Arrow/>
+  </span>
+</a>

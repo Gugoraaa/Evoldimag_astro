@@ -1,0 +1,51 @@
+---
+import BlueCard from '../../components/BlueCard.astro';
+import BlackCard from '../../components/BlackCard.astro';
+import {
+  IconGrid,
+  IconTooth,
+  IconBridge,
+  IconInfinity,
+} from '../../components/icons/courses/coursesIcons.tsx';
+---
+<div class="container py-10 sm:pt-0 px-10 mx-auto md:px-4 lg:px-10 xl:px-40 2xl:px-32 ">
+<div class=" grid grid-cols-1 md:grid-cols-3 gap-6">
+  <BlueCard
+    href="https://www.youtube.com/watch?v=FURzzapnbLo"
+    title="Cómo Activar Rejilla y Regla en exocad"
+    description="Aprende paso a paso cómo habilitar la rejilla y la regla en exocad para mejorar tu precisión y flujo de trabajo en diseño dental."
+    icon={IconGrid}
+>
+    <slot name="icon"><IconGrid /></slot>
+  </BlueCard>
+
+  <BlueCard
+    href="https://www.youtube.com/watch?v=YtFmF59PycU"
+    title="Diseño de Cara Palatina en Incisivo Central Superior"
+    description="Domina el diseño de la cara palatina del incisivo central superior con este tutorial detallado en exocad."
+    icon={IconTooth}
+  >
+    <IconTooth />
+  </BlueCard>
+
+  <BlueCard
+    href="https://www.youtube.com/watch?v=JKwWUkPeBnk"
+    title="No aparece la opción de Dividir Puente en exocad?"
+    description="Descubre cómo solucionar el problema cuando no aparece la opción de Dividir Puente en exocad."
+    icon={IconBridge}
+  >
+    <slot name="icon"><IconBridge /></slot>
+  </BlueCard>
+</div>
+
+<div class="flex justify-center mt-8">
+  <BlackCard
+    href="https://infinityshapeslibraries.com/"
+    title="Explora Nuestras Librerías Destacadas"
+    description="Accede  las librerías más exclusivas para tus diseños dentales y optimiza tu flujo de trabajo con InfinityShapes."
+    icon={IconInfinity}
+  >
+    <slot name="icon"><IconInfinity /></slot>
+  </BlackCard>
+</div>
+</div>

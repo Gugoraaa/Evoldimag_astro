@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import moldeGif from '../../assets/molde2-unscreen.webp';
+import onlinePng from '../../assets/online_png.webp';
+---
+
+<div class="flex items-center justify-center px-1 mt-44 md:px-20 xl:px-40 xl:mb-20 2xl:px-44 2xl:py-10 2xl:ml-12" id="main">
+  <div class="relative w-full max-w-7xl text-left flex flex-col lg:flex-row items-center lg:items-start">
+    
+    <!-- Texto -->
+    <div class="flex-1 text-center lg:text-left">
+      <div class="w-full text-center lg:text-left">
+        <Image 
+          src={onlinePng} 
+          alt="Logo"
+          loading="eager"
+          widths={[96, 160]} 
+          sizes="(max-width: 1024px) 96px, 160px"
+          class="mx-auto lg:mx-0 w-24 lg:w-40"
+        /> 
+
+
+      </div>
+      
+      <h1 class="text-white font-bold text-5xl md:text-6xl xl:mb-10 xl:text-7xl 2xl:mb-20 2xl:text-8xl">
+        <span class="text-blue-400">Esta</span>ncia <br />
+        <span class="text-blue-400">Digital</span>Dentistry
+      </h1>
+      
+      <p class="text-gray-300 text-base sm:text-lg md:text-xl mt-4 2xl:ml-2">
+        Nuestro programa <span class="text-blue-400">más completo</span> de <span class="text-blue-400">Odontología Digital!</span>
+      </p>
+      
+      <p class="text-gray-300 text-base sm:text-lg md:text-xl mb-6 2xl:ml-2">
+        ¿Estás listo para llevar tu odontología al siguiente nivel?
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center lg:justify-start 2xl:ml-2">
+        <a href="https://wa.me/message/EYD5PVJNW5K2A1" target="_blank" rel="noopener">
+          <button class="bg-white text-black px-6 py-3 rounded-md font-bold text-lg hover:bg-gray-100 transition-all flex group">
+            Inscríbete aquí
+            <svg class="ml-2 h-5 w-5 text-black transition-transform group-hover:translate-x-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Imagen -->
+    <div class="flex-1 flex items-center justify-center lg:pl-12">
+      
+      <Image
+      src={moldeGif}
+      alt="Descripción del GIF"
+      loading="eager"
+      width={800}               
+      height={600}              
+      class="w-full max-w-md md:max-w-lg 2xl:max-w-5xl object-contain"
+    />
+    </div>
+  </div>
+</div>
+
+<!-- Video -->
+<div class="flex justify-center mb-24">
+  <iframe 
+    class="w-80 h-48 sm:w-96 sm:h-56 md:w-[500px] md:h-[300px] rounded-3xl"
+    src="https://www.youtube.com/embed/mbn8lEbUv9M"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+
+</div>

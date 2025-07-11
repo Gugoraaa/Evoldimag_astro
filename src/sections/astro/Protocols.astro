@@ -1,0 +1,20 @@
+---
+import ImageProtocolsCard from "../../components/ImageProtocolsCard.astro";
+import protocolo1 from "../../assets/img/protocolos/protocolo1.webp";
+import protocolo2 from "../../assets/img/protocolos/protocolo2.webp";
+import protocolo3 from "../../assets/img/protocolos/protocolo3.webp";
+---
+
+
+<div id="protocolos" class="mx-auto px-10 mb-10 md:px-10 md:py-10 md:mb-10 xl:px-40 xl:mb-0 2xl:px-6 mt-5">  
+  <div class="text-center mb-4 md:mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold">¿Estás listo para lograr esto y más?</h1>
+  </div>
+
+  <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+    <ImageProtocolsCard src={protocolo1} alt="Protocolo 1" />
+    <ImageProtocolsCard src={protocolo2} alt="Protocolo 2" />
+    <ImageProtocolsCard src={protocolo3} alt="Protocolo 3" />
+</div>
+
+</div>

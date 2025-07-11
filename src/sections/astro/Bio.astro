@@ -1,0 +1,24 @@
+---
+import BioCard from '../../components/BioCard.astro';
+import bio1 from '../../assets/img/bio/bio1.webp';
+import bio2 from '../../assets/img/bio/bio2.webp';
+const bioImages = [
+  { image: bio1, alt: 'Bio 1' },
+  { image: bio2, alt: 'Bio 2' }
+];
+---
+
+<div id="bio" class="mx-auto px-6 pt-20 md:pb-10 md:px-10 xl:pt-8 xl:pb-32 2xl:pt-16 2xl:pb-32">
+  <div class="text-center mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold">
+      Es un honor formar <br class="block md:hidden"> parte del <br class="hidden md:block"> grupo
+      <br class="block md:hidden"> Bio-Emulation
+    </h1>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+    {bioImages.map((img) => (
+      <BioCard image={img.image} alt={img.alt} />
+    ))}
+  </div>
+</div>
